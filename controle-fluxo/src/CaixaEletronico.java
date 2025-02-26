@@ -7,26 +7,30 @@ public class CaixaEletronico {
         Scanner scanner = new Scanner (System.in);
         
         float saldo = 1500;
+        
 
         System.out.print("Quanto deseja sacar? ");
         float saldoSacar = scanner.nextFloat();
 
-        scanner.close();
+        if (saldoSacar <= saldo) {
 
-        if (saldoSacar > saldo) {
+             float novoSaldo = saldo - saldoSacar;
 
-           System.out.print("Saldo insuficiente para saque!");
 
+            System.out.println("Saque desejeado foi200 enviado! \n Seu saldo atual é de " + novoSaldo);
+
+        
         }
 
         else {
 
-            System.out.print("Saldo desejado enviado!");
+            System.out.println("Saldo insuficiente para saque!");
+        }
 
-
+        scanner.close();
 
     }
+    
 
 }
 
-}
